@@ -1,0 +1,13 @@
+apiversion: v1
+kind: Service
+metadata:
+  name: platformnpservice-srv
+spex:
+  type: NodePort
+  selector:
+    app: platformservice
+  ports:
+    - name: platformservice
+      protocol: TCP
+      port: 80
+      targetPort: 80
